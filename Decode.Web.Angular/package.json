@@ -1,6 +1,6 @@
 {
   "name": "decode.web.angular",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "scripts": {
     "sass-migrator": "echo Using Sass migrator to automatically update your stylesheets to use math.div() and list.slash() && npx sass-migrator division  --migrate-deps --verbose src/visuals/scss/all.scss",
     "ng": "ng",
