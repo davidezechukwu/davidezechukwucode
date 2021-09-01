@@ -1,0 +1,12 @@
+{
+  "ids": {
+    "Cake": 6
+  },
+  "models": {
+    "Cake": {
+      "1": "{\"Name\":\"Chocolate Cake 2222\",\"Comment\":\"Choc Cake\",\"ImageUrl\":\"untitled-design-13-1--1628006808215.png\",\"YumFactor\":3,\"ID\":1}",
+      "2": "{\"Name\":\"Chocolate Orange\",\"Comment\":\"Contains real oranges\",\"ImageUrl\":\"choc-orange-1628009536418.jfif\",\"YumFactor\":5,\"ID\":2}",
+      "3": "{\"Name\":\"xx\",\"Comment\":\"ewee\",\"ImageUrl\":\"rainbow-cake-1628053338327.jfif\",\"YumFactor\":1,\"ID\":3}"
+    }
+  }
+}

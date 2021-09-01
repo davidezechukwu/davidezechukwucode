@@ -1,0 +1,59 @@
+@import "VariablesForAll.scss";
+
+.wc-list {
+
+  .k-grid-header {
+    background-color: #000 !important;
+
+    .k-header {      
+        background-color: #000 !important;      
+    }
+
+    .k-link {
+      color: #3366ff;
+    }
+
+    .k-link:hover {
+      text-decoration: underline;
+      color: #6699ff;
+    }
+  }
+
+  .k-header {
+    padding: 2rem 0 2rem 1rem;
+    text-align: left;
+    background-color: #222 !important;
+  }
+
+  .wc-list-header-row {
+    background-color: $wc-list-header-row-background-color;
+    color: $wc-list-header-row-color;
+  }
+
+  *[kendogridtablebody] {
+    color: $wc-list-body-color;
+
+    a {
+      text-decoration: underline;
+      color: $wc-list-body-anchor-color;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: $wc-list-body-anchor-color-hover;
+    }
+
+    *[kendogridcell] {
+      background-color: $wc-list-body-background-color;
+    }
+  }
+
+  .wc-list-header-cell,
+  .wc-list-body-cell {
+    padding: 1rem 2rem;
+  }
+}
+
+.wc-no-item-in-list {
+  margin: 1rem 0 3rem 0;
+}

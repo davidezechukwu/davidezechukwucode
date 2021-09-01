@@ -1,0 +1,88 @@
+$border-radius: 0;
+$primary-color: #ff9933;
+
+/*main variables*/
+$wc-main-color: #888;
+$wc-main-font-family: Arial, Helvetica, sans-serif;
+$wc-h1-font-family: 'Poppins',Arial, Helvetica, sans-serif;
+$wc-h2-font-family: 'Poppins',Arial, Helvetica, sans-serif;
+$wc-h3-font-family: Arial, Helvetica, sans-serif;
+$wc-main-section-wc-main-section-main-content-padding: 2rem;
+
+
+/*page variables*/
+$wc-page-color: yellow;
+$wc-breadcrumb-color: $primary-color;
+$wc-breadcrumb-color-hover: yellow;
+$wc-breadcrumb-background-color: rgba(0, 0, 0, 0.8);
+$wc-main-content-background-color: rgba(0, 0, 0, 0.8);
+$wc-main-content-h2-color: #ffffff;
+$wc-main-content-h3-color: $primary-color;
+$wc-main-content-h4-color: $primary-color;
+$wc-main-content-label-color: $primary-color;
+$wc-main-content-left-padding: 5rem;
+
+/*Navigation Varaibles */
+$wc-nav-a-color: #607D8B;
+$wc-nav-a-color-hover: #039be5;
+$wc-nav-a-background-color-hover: #CFD8DC;
+$wc-nav-a-color-active: #039be5;
+
+/*leterring variables*/
+$wc-main-content-left-padding: 2rem;
+$wc-main-content-top-padding: 1rem;
+
+/*form variables*/
+$wc-form-font-family: Arial, Helvetica, sans-serif;
+
+/*Form variables*/
+$input-border: 1px solid #000;
+$input-border-radius: $border-radius;
+$input-color: #222;
+$input-background-color: white;
+$wc-button-border-radius: $border-radius;
+$wc-button-color: $primary-color;
+$wc-button-color-hover: yellow;
+$wc-button-disabled-color: $primary-color;
+$wc-button-disabled-color-hover: #fff;
+$wc-button-disabled-background-color: transparent;
+/*$wc-clear-background-button-color: $primary-color;*/
+$wc-clear-background-button-color: #69f;
+/*$wc-button-background-color-1: rgb(60,60,60);
+$wc-button-background-color-2: rgb(0,0,0);
+$wc-button-background-color-3: rgb(10,10,10);*/
+$wc-button-background-color-1: #111111;
+$wc-button-background-color-2: #1F1F1F;
+$wc-button-background-color-3: #111111;
+$wc-clear-background-button-color-hover: #99ccff;
+/*$wc-clear-background-button-background-color-1: rgb(50,50,50);
+$wc-clear-background-button-background-color-2: rgb(0,0,0);
+$wc-clear-background-button-background-color-3: rgb(10,10,10);*/
+$wc-clear-background-button-background-color-1: #2b2b2b;
+$wc-clear-background-button-background-color-2: #2b2b2b;
+$wc-clear-background-button-background-color-3: #2b2b2b;
+$wc-clear-background-button-background-color-hover-1: darken($wc-clear-background-button-background-color-1, 5%);
+$wc-clear-background-button-background-color-hover-2: darken($wc-clear-background-button-background-color-2, 5%);
+$wc-clear-background-button-background-color-hover-3: darken($wc-clear-background-button-background-color-3, 5%);
+$wc-button-border-width: 1px;
+$wc-button-border-color: $primary-color;
+$wc-button-border-color-hover: $primary-color;
+/*$wc-clear-background-button-border-color: #333;
+$wc-clear-background-button-border-color-hover: #111;*/
+$wc-clear-background-button-border-color: #333;
+$wc-clear-background-button-border-color-hover: #333;
+
+/*List Variables*/
+$wc-list-header-row-background-color: #3366ff;
+$wc-list-header-row-color: #e8f2f2;
+$wc-list-body-color: #333;
+$wc-list-body-background-color: #ffffff;
+$wc-list-body-anchor-color: #007bff;
+$wc-list-body-anchor-color-hover: #6699ff;
+
+/*Components*/
+/*CollapserComponent variables*/
+$wc-collapser-color: $primary-color;
+$wc-collapser-color-hover: yellow;
+
+

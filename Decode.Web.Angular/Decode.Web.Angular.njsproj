@@ -1,0 +1,183 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Decode.Web.Angular</Name>
+    <RootNamespace>Decode.Web</RootNamespace>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>824c684a-d64e-4573-bd04-0cc871b63577</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>src\main.ts</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="angular.json" />
+    <Content Include="e2e\protractor.conf.js" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="karma.conf.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="README.md" />
+    <Content Include="src\app\Components\CakeComponent\CakeComponent.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\app\Components\CakeComponent\CakeComponent.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\app\Pages\ContactUsPage\ContactUsPage.html" />
+    <Content Include="src\app\Pages\ContactUsPage\ContactUsPage.scss" />
+    <Content Include="src\app\Pages\HomePage\HomePage.html" />
+    <Content Include="src\app\Pages\HomePage\HomePage.scss" />
+    <Content Include="src\app\Pages\HTTP404Page\HTTP404Page.html" />
+    <Content Include="src\app\Components\ApplicationRootComponent\ApplicationRootComponent.html" />
+    <Content Include="src\app\Components\ApplicationRootComponent\ApplicationRootComponent.scss" />
+    <Content Include="src\app\Components\PageBackgroundComponent\PageBackgroundComponent.html" />
+    <Content Include="src\app\Components\PageBackgroundComponent\PageBackgroundComponent.scss" />
+    <Content Include="src\app\Components\TopMenuComponent\TopMenuComponent.html" />
+    <Content Include="src\app\Components\TopMenuComponent\TopMenuComponent.scss" />
+    <Content Include="src\visuals\assets\videos\sample1.mp4" />
+    <Content Include="src\visuals\assets\videos\sample2.mp4" />
+    <Content Include="src\visuals\scss\Core.scss" />
+    <Content Include="src\visuals\scss\Reset.scss" />
+    <Content Include="src\visuals\assets\images\404.gif" />
+    <Content Include="src\visuals\assets\images\speedTest.jpg" />
+    <Content Include="src\visuals\assets\javascript\include.js" />
+    <Content Include="src\visuals\scss\all.scss" />
+    <Content Include="src\visuals\scss\BackgroundVideo.scss" />
+    <Content Include="src\visuals\scss\GenericComponent.scss" />
+    <Content Include="src\visuals\scss\Dashboard.scss" />
+    <Content Include="src\visuals\scss\GenericDetailView.scss" />
+    <Content Include="src\visuals\scss\GenericForm.scss" />
+    <Content Include="src\visuals\scss\Lettering.scss" />
+    <Content Include="src\visuals\scss\GenericListView.scss" />
+    <Content Include="src\visuals\scss\Navigation.scss" />
+    <Content Include="src\visuals\scss\VariablesForAll.scss" />
+    <Content Include="browserslist" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="tsconfig.app.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.spec.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist\" />
+    <Folder Include="e2e\" />
+    <Folder Include="e2e\src\" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\AppCore\" />
+    <Folder Include="src\app\Components\CakeComponent\" />
+    <Folder Include="src\app\Pages\ContactUsPage\" />
+    <Folder Include="src\app\Pages\HomePage\" />
+    <Folder Include="src\app\Pages\HTTP404Page\" />
+    <Folder Include="src\app\AppCore\Application\" />
+    <Folder Include="src\app\AppCore\Routing\" />
+    <Folder Include="src\app\Components\ApplicationRootComponent\" />
+    <Folder Include="src\app\Components\PageBackgroundComponent\" />
+    <Folder Include="src\app\Components\TopMenuComponent\" />
+    <Folder Include="src\app\AppCore\Animations\" />
+    <Folder Include="src\app\Models\" />
+    <Folder Include="src\app\AppCore\Pipes\" />
+    <Folder Include="src\app\AppCore\Pipes\SafePipe\" />
+    <Folder Include="src\app\Services\" />
+    <Folder Include="src\app\Services\CakeService\" />
+    <Folder Include="src\app\Services\ErrorHandlerService\" />
+    <Folder Include="src\app\Services\ComponentCommunicationService\" />
+    <Folder Include="src\app\Services\LocalisationService\" />
+    <Folder Include="src\app\Services\ProfileService\" />
+    <Folder Include="src\app\Services\FeatureDetectionService\" />
+    <Folder Include="src\app\Services\NotificationService\" />
+    <Folder Include="src\app\Components\" />
+    <Folder Include="src\app\Components\SuperComponent\" />
+    <Folder Include="src\app\Pages\" />
+    <Folder Include="src\app\Pages\SuperPage\" />
+    <Folder Include="src\app\Services\SuperService\" />
+    <Folder Include="src\visuals\assets\" />
+    <Folder Include="src\visuals\assets\css\" />
+    <Folder Include="src\visuals\assets\fonts\" />
+    <Folder Include="src\visuals\assets\images\" />
+    <Folder Include="src\visuals\assets\javascript\" />
+    <Folder Include="src\visuals\assets\lib\" />
+    <Folder Include="src\visuals\scss\" />
+    <Folder Include="src\visuals\assets\svg\" />
+    <Folder Include="src\visuals\assets\videos\" />
+    <Folder Include="src\environments\" />
+    <Folder Include="src\visuals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="src\app\Components\CakeComponent\CakeComponent.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\Pages\ContactUsPage\ContactUsPage.ts" />
+    <TypeScriptCompile Include="src\app\Pages\HomePage\HomePage.ts" />
+    <TypeScriptCompile Include="src\app\Pages\HTTP404Page\HTTP404Page.ts" />
+    <TypeScriptCompile Include="src\app\AppCore\Application\Application.ts" />
+    <TypeScriptCompile Include="src\app\AppCore\Routing\Routing.ts" />
+    <TypeScriptCompile Include="src\app\Components\ApplicationRootComponent\ApplicationRootComponent.spec.ts" />
+    <TypeScriptCompile Include="src\app\Components\ApplicationRootComponent\ApplicationRootComponent.ts" />
+    <TypeScriptCompile Include="src\app\Components\PageBackgroundComponent\PageBackgroundComponent.ts" />
+    <TypeScriptCompile Include="src\app\Components\TopMenuComponent\TopMenuComponent.ts" />
+    <TypeScriptCompile Include="src\app\AppCore\Animations\PageAnimations.ts" />
+    <TypeScriptCompile Include="src\app\AppCore\Pipes\SafePipe\SafePipe.ts" />
+    <TypeScriptCompile Include="src\app\Services\CakeService\CakeService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\Services\ComponentCommunicationService\ComponentCommunicationService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\Services\ErrorHandlerService\ErrorHandlerService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\Services\LocalisationService\LocalisationService.ts" />
+    <TypeScriptCompile Include="src\app\Services\ProfileService\ProfileService.ts" />
+    <TypeScriptCompile Include="src\app\Services\FeatureDetectionService\FeatureDetectionService.ts" />
+    <TypeScriptCompile Include="src\app\Services\NotificationService\NotificationService.ts" />
+    <TypeScriptCompile Include="src\app\Components\SuperComponent\SuperComponent.ts" />
+    <TypeScriptCompile Include="src\app\Pages\SuperPage\SuperPage.ts" />
+    <TypeScriptCompile Include="src\app\Services\SuperService\SuperService.ts" />
+    <TypeScriptCompile Include="src\environments\IEnvironment.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\visuals\assets\javascript\polyfills.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\test.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>

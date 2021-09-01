@@ -1,0 +1,212 @@
+@import "VariablesForAll.scss";
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=url] {  
+  border-radius: $input-border-radius;
+  border: $input-border;
+  color: $input-color;  
+  background-color: $input-background-color !important;
+}
+
+.wc-inputform {
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {    
+    clear: both;
+    display: block;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  label:hover {
+    text-decoration: underline;
+  }
+}
+
+.wc-button {
+  border: unset;
+  vertical-align: text-top;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wc-button,
+input[type='submit'],
+input[type='button'],
+button {
+  font-family: 'Fjalla One', sans-serif !important;  
+  border-radius: $wc-button-border-radius;  
+  border-color: $wc-button-border-color;
+  border-width: $wc-button-border-width;
+  border-style: solid;
+  background-color: transparent;
+  color: $wc-button-color;
+  cursor: pointer;
+}
+
+.wc-button:hover,
+input[type='submit']:hover,
+input[type='button']:hover,
+button:hover {
+  color: $wc-button-color-hover;
+  text-decoration: underline;
+  border-width: $wc-button-border-width;
+  border-style: outset;
+  border-color: $wc-button-border-color;
+  background-color: $wc-button-background-color-2;
+  background: -webkit-linear-gradient(-180deg, $wc-button-background-color-1, $wc-button-background-color-2, $wc-button-background-color-3); // For Safari 5.1 to 6.0
+  background: -o-linear-gradient(-180deg, $wc-button-background-color-1, $wc-button-background-color-2, $wc-button-background-color-3); //For Opera 11.1 to 12.0 
+  background: -moz-linear-gradient(-180deg, $wc-button-background-color-1, $wc-button-background-color-2, $wc-button-background-color-3); // For Firefox 3.6 to 15 
+  background: linear-gradient(-180deg, $wc-button-background-color-1, $wc-button-background-color-2, $wc-button-background-color-3); // Standard syntax
+}
+
+.wc-button[disabled],
+input[type='submit'][disabled],
+input[type='button'][disabled],
+input[type='checkbox'][disabled],
+input[type='radio'][disabled],
+button[disabled] {
+  color: $wc-button-disabled-color;
+  cursor: default;
+  text-decoration: none;
+  background-color: $wc-button-disabled-background-color;
+}
+
+.wc-button[disabled]:hover,
+input[type='submit'][disabled]:hover,
+input[type='button'][disabled]:hover,
+input[type='checkbox'][disabled]:hover,
+input[type='radio'][disabled]:hover,
+button[disabled]:hover {
+  cursor: default;
+  text-decoration: none;
+  color: $wc-button-disabled-color-hover;
+  border-style: solid;
+}
+
+.wc-clear-background {
+  .wc-button,
+  input[type='submit'],
+  input[type='button'],
+  button {    
+    border-color: $wc-clear-background-button-border-color;
+    color: $wc-clear-background-button-color !important;
+    background-color: $wc-clear-background-button-background-color-2;
+    background: -webkit-linear-gradient(-180deg, $wc-clear-background-button-background-color-1, $wc-clear-background-button-background-color-2, $wc-clear-background-button-background-color-3); // For Safari 5.1 to 6.0 
+    background: -o-linear-gradient(-180deg, $wc-clear-background-button-background-color-1, $wc-clear-background-button-background-color-2, $wc-clear-background-button-background-color-3); // For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(-180deg, $wc-clear-background-button-background-color-1, $wc-clear-background-button-background-color-2, $wc-clear-background-button-background-color-3); // For Firefox 3.6 to 15 
+    background: linear-gradient(-180deg, $wc-clear-background-button-background-color-1, $wc-clear-background-button-background-color-2, $wc-clear-background-button-background-color-3); // Standard syntax 
+  }
+
+  .wc-button:hover,
+  input[type='submit']:hover,
+  input[type='button']:hover,
+  button:hover {
+    border-color: $wc-clear-background-button-border-color-hover;
+    color: $wc-clear-background-button-color-hover !important;
+    background-color: $wc-clear-background-button-background-color-hover-2;
+    background: -webkit-linear-gradient(-180deg, $wc-clear-background-button-background-color-hover-1, $wc-clear-background-button-background-color-hover-2, $wc-clear-background-button-background-color-hover-3); // For Safari 5.1 to 6.0 
+    background: -o-linear-gradient(-180deg, $wc-clear-background-button-background-color-hover-1, $wc-clear-background-button-background-color-hover-2, $wc-clear-background-button-background-color-hover-3); // For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(-180deg, $wc-clear-background-button-background-color-hover-1, $wc-clear-background-button-background-color-hover-2, $wc-clear-background-button-background-color-hover-3); // For Firefox 3.6 to 15 
+    background: linear-gradient(-180deg, $wc-clear-background-button-background-color-hover-1, $wc-clear-background-button-background-color-hover-2, $wc-clear-background-button-background-color-hover-3); // Standard syntax 
+  }
+
+  .wc-button[disabled],
+  input[type='submit'][disabled],
+  input[type='button'][disabled],
+  button[disabled] {
+    cursor: default;
+    background-color: transparent !important;
+  }
+}
+
+.wc-label-for {
+  cursor: pointer;
+}
+
+.wc-label-for:hover {
+  text-decoration: underline;
+  color: $wc-button-color-hover;
+}
+
+.wc-label {
+}
+
+.wc-label::after {
+  content: ":";
+}
+
+.wc-value {
+  float: left;
+  display: inline;
+}
+
+//Extra small devices
+@media (min-width: 576px) {
+}
+
+//Medium devices
+@media (min-width: 768px) {
+  .wc-inputform {
+    label {
+      cursor: pointer;
+      width: 100% !important;
+
+      input[type=text],
+      input[type=number],
+      input[type=email],
+      input[type=password],
+      input[type=tel],
+      input[type=url],
+      select,
+      textarea {
+        width: 100% !important;
+      }
+    }
+
+    label:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//Large devices
+@media (min-width: 992px) {
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url] {
+    /*padding: 0.5rem 1.0rem;
+    letter-spacing: 0.2rem;*/
+  }
+
+  select {
+    /*padding: 0.5rem 1rem 0.5rem 1rem;*/
+  }
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}
+

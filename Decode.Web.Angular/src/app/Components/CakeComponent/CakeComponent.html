@@ -1,0 +1,145 @@
+<style>
+  .cake-row {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 3;
+    width: 100%
+  }
+
+  .cake-cell {
+    max-width: 33%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .cake-image {
+    max-width: 100%;
+  }
+
+  .cake-row-form input, .cake-row-form textarea {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cake-form {
+    max-width: 400px;
+  }
+
+  .create-form label {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .create-form input, .create-form textarea {
+    float: right
+  }
+
+  [type="file"] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+    [type="file"] + label {
+      /* File upload button styles */
+    }
+
+      [type="file"]:focus + label,
+      [type="file"] + label:hover {
+        /* File upload hover state button styles */
+      }
+
+    [type="file"]:focus + label {
+      /* File upload focus state button styles */
+    }
+
+  .fileuploadmimic {
+    white-space: nowrap;
+    border: 1px solid #888;
+    padding: 1.5rem;
+    float: right;
+    width: 100%;
+    cursor: pointer;
+    background-color: ButtonFace;
+  }
+
+    .fileuploadmimic:hover {
+      background-color: ButtonHighlight;
+    }
+
+  .fileuploadmimic2 {
+    white-space: nowrap;
+    border: 1px solid #888;
+    padding: 1.5rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: ButtonFace;
+  }
+</style>
+
+<h1>{{this.CopyConstants.CAKE_CREATE_A_CAKE}}</h1>
+<form class="create-form cake-form" method="post" [action]="CakeEndPoint" enctype='multipart/form-data'>
+  <label>
+    {{this.CopyConstants.CAKE_NAME}}
+    <input type="text" name="Name" id="Name" required="required" [max]="NameMax">
+  </label>
+  <label>
+    {{this.CopyConstants.CAKE_YUM_FACTOR}}
+    <input type="number" name="YumFactor" id="YumFactor" required="required" [min]="YumFactorMin" [max]="YumFactorMax">
+  </label>
+  <label>
+    {{this.CopyConstants.CAKE_COMMENT}}
+    <textarea Name="Comment" id="Comment" required="required" maxlength="200"></textarea>
+  </label>
+  <div>
+    <input type="file" name="ImageUrl" id="ImageUrl" required="required" (change)="OnFileSelectedCreate($event)">
+    <label for="ImageUrl" class="fileuploadmimic">{{this.CopyConstants.CAKE_IMAGE}}</label>
+    <p></p>
+  </div>
+  <br style="clear:both" />
+  <input type="submit" class="cake-submit" (click)="onCreateClick($event)" value="{{this.CopyConstants.CAKE_SUBMIT_CREATE_A_CAKE}}" />
+</form>
+<br style="clear:both" />
+
+<h1 style="margin-top: 6rem;">{{this.CopyConstants.CAKE_EXISTING_CAKES}}</h1>
+<div *ngIf="Cakes">
+  <div class="cake-row">
+    <div *ngFor="let cake of Cakes" class="cake-cell">
+      <img [src]="cake.ImageUrl" [alt]="cake.Name" class="cake-image">
+      <div class="">
+        <h1>{{this.CopyConstants.CAKE_NAME}}: {{cake.Name}}</h1>
+        <p>{{this.CopyConstants.CAKE_YUM_FACTOR}}: {{cake.YumFactor}}</p>
+        <p>{{this.CopyConstants.CAKE_COMMENT}}: {{cake.Comment}}</p>
+      </div>
+      <div>
+        <form class="update-form cake-row-form" method="post" [action]="CakeEndPoint + '/' + cake.ID" enctype='multipart/form-data'>
+          <input type="hidden" name="ID" required="required" [max]="NameMax" value="{{cake.ID}}" />
+          <input type="text" name="Name" required="required" [max]="NameMax" value="{{cake.Name}}" /><br />
+          <textarea Name="Comment" required="required" maxlength="200">{{cake.Comment}}</textarea><br />
+          <input type="number" name="YumFactor" required="required" [min]="YumFactorMin" [max]="YumFactorMax" value="{{cake.YumFactor}}" /><br />
+          <div>
+            <label class="fileuploadmimic">
+              {{this.CopyConstants.CAKE_IMAGE}}
+              <input type="file" name="ImageUrl" [id]='"ImageUrl"+cake.ID.toString()' required="required" (change)="OnFileSelectedUpdate($event)" />
+            </label>
+            <p></p>
+          </div>
+          <input type="submit" class="cake-submit" value="{{this.CopyConstants.CAKE_UPDATE_CAKE}}" (click)="onUpdateClick($event)" />
+        </form>
+        <form class="delete-form cake-row-form" method="post" [action]="CakeEndPoint + '/' + cake.ID" enctype='multipart/form-data'>
+          <input type="submit" class="cake-submit" value="{{this.CopyConstants.CAKE_DELETE_CAKE}}" (click)="onDeleteClick($event)" style="margin-top: -1.3rem;" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

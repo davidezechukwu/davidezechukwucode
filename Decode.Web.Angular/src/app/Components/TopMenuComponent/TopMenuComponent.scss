@@ -1,0 +1,110 @@
+@import "../../../visuals/scss/VariablesForAll.scss";
+
+.TopMenuComponent {
+  background-color: rgba(5, 5, 5, 0.9) !important;
+
+  input[type=submit] {
+    font-family: "Arial, Helvetica, sans-serif";
+    border-width: 0;
+    border-style :none;
+
+  }
+}
+
+.TopMenuComponent input[type=submit],
+.wc-navbar-brand-container a,
+.TopMenuComponent a {
+  color: #ff9900 !important;
+  padding: 1em;
+}
+
+.TopMenuComponent input[type=submit]:hover,
+.wc-navbar-brand-container a:hover,
+.TopMenuComponent a:hover {
+  color: yellow !important;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.TopMenuComponent input[type=submit],
+.wc-navbar-brand-container.wc-active a,
+.TopMenuComponent .wc-active a {
+  border-bottom: #3366FF 3px solid;
+  color: #f0f0fF !important;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none;
+}
+
+
+.navbar select.wc-languages {
+  margin-top: 1em;
+}
+
+.navbar select {
+  width: 100%;
+  background-color: white;
+  color: black;
+  margin-bottom: 0.5em;
+}
+
+.TopMenuComponent input[type=submit],
+.wc-navbar-brand-container a,
+.TopMenuComponent a {
+  padding: 1em;
+}
+
+
+.navbar select.wc-languages {
+  margin-top: 1em;
+}
+
+.navbar select {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+//small devices
+@media (min-width: 576px) {
+}
+
+//Medium devices
+@media (min-width: 768px) {
+  .wc-dashboard-summary {
+    padding: 1em;
+  }
+
+  .wc-dashboard-summary a {
+    padding: 0.5em !important;
+  }
+
+  .wc-navbar-brand-container a,
+  .TopMenuComponent a {
+    padding: 1em;
+  }
+
+  .wc-navbar-brand-container a:hover,
+  .TopMenuComponent a:hover {
+  }
+
+  .wc-navbar-brand-container.wc-active a,
+  .TopMenuComponent .wc-active a {
+  }
+
+
+  .navbar select.wc-languages {
+    margin-top: 1em;
+  }
+
+  .navbar select {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+}
+
+//Large devices
+@media (min-width: 992px) {
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}

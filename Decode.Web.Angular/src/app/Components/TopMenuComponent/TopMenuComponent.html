@@ -1,0 +1,36 @@
+<section class="wc-main-section">
+  <nav class="wc-component TopMenuComponent navbar navbar-expand-lg navbar-dark" role="navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/home"><span style="text-transform:none !important">{{this.CopyConstants.WEBSITE_NAME_ANGULAR}}</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="wc-active"><a class="nav-link" routerLink="/contactus">{{this.CopyConstants.CONTACT_US}}</a></li>
+          <li class="nav-item" routerLinkActive="wc-active"><a class="nav-link" href="{{this.RootApiPathServicePath}}" target="_blank">{{this.CopyConstants.API}}</a></li>
+          <li class="nav-item" routerLinkActive="wc-active"><a class="nav-link" href="http://pikin.co/" target="_blank">{{this.CopyConstants.SHOWCASE}}</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <table class="wc-dashboard-summary">
+              <tr>
+                <td>
+                  <table  >
+                    <tr>
+                      <td>
+                        <select name="LanguagesSelect" [(ngModel)]="CurrentLanguage" class="wc-languages" *ngIf="Languages.length > 0" (change)="OnLanguageChange() ">
+                          <option *ngFor="let language of Languages" [ngValue]="language" >{{Localise(language.LanguageName)}}</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </li>
+        </ul>        
+      </div>
+    </div>
+  </nav>
+</section>

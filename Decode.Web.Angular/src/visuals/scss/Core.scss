@@ -1,0 +1,234 @@
+@import "VariablesForAll.scss";
+
+html {
+  
+}
+
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 20vh;
+  height: 80vh;
+  background-color: rgba(10,10,10,0.8);
+}
+
+a {
+  cursor: pointer;
+}
+
+.wc-page {
+  /*min-height: 20vh;
+  height: 80vh;
+  background-color: rgba(10,10,10,0.8);*/
+  a + a {
+    margin-left: 1rem;
+  }
+
+  &.wc-jumbotron {
+    color: #333 !important;
+    background-color: #fff;
+    padding: 0 3rem;
+    margin: 1rem 0 0 0;
+  }
+
+  .wc-breadcrumb {
+    padding: 0.25rem 0 0 2rem;
+    background-color: $wc-breadcrumb-background-color;
+    color: $wc-breadcrumb-color;
+    margin: 0 !important;
+
+    a {
+      color: $wc-breadcrumb-color;
+    }
+
+    a:hover {
+      color: $wc-breadcrumb-color-hover;
+      background-color: transparent;
+    }
+  }
+
+  .wc-main-content {
+    padding: 0 5rem;
+    background-color: $wc-main-content-background-color;
+
+    .wc-main-section {
+
+      .wc-main-section-main-content {
+        @extend .wc-jumbotron;
+
+        &:before {
+          padding: $wc-main-section-wc-main-section-main-content-padding;
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        &:after {
+          padding: $wc-main-section-wc-main-section-main-content-padding;
+          content: "";
+          display: table;
+          clear: both;
+        }
+      }
+    }
+
+    &:after {
+      padding: $wc-main-section-wc-main-section-main-content-padding;
+      content: " ";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+
+.wc-main-content {
+  padding: $wc-main-content-top-padding l-, $wc-main-content-left-padding !important;
+
+  .wc-main-section {
+    padding: 0 !important;
+  }
+}
+
+.wc-breadcrumb {
+  padding: 0.25rem 0 0 $wc-main-content-left-padding;
+}
+
+//Extra small devices
+@media (min-width: 576px) {
+}
+
+//Medium devices
+@media (min-width: 768px) {
+  body {
+    margin: 2rem;
+  }
+
+  .wc-page {
+
+    a + a {
+      margin-left: 1rem;
+    }
+
+    .wc-jumbotron {
+      color: #333 !important;
+      background-color: #fff;
+      padding: 0 3rem;
+      margin: 0 0 0 0;
+    }
+
+    .wc-breadcrumb {
+      padding: 0.25rem 0 0 $wc-main-content-left-padding;
+      background-color: $wc-breadcrumb-background-color;
+      color: $wc-breadcrumb-color;
+      margin: 0 !important;
+
+      a {
+        color: $wc-breadcrumb-color;
+      }
+
+      a:hover {
+        color: $wc-breadcrumb-color-hover;
+        background-color: transparent;
+      }
+    }
+
+    .wc-main-content {
+      padding: 0 $wc-main-content-left-padding;
+      background-color: $wc-main-content-background-color;
+
+      .wc-main-section {
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+//Large devices
+@media (min-width: 992px) {
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}
+
+
+
+/*****************************/
+.wc-fullscreen-background-root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -101;
+}
+
+.wc-fullscreen-background-root-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*.wc-fullscreen-background-root-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
+
+@media (min-aspect-ratio: 16/9) {
+  .wc-fullscreen-background-root-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .wc-fullscreen-background-root-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wc-fullscreen-background-root {
+    background: none;
+  }
+
+  .wc-fullscreen-background-root-video {
+    display: none;
+  }
+}
+
+
+//Small devices
+@media (min-width: 576px) {
+}
+
+//Medium devices
+@media(min-width: 768px) {
+}
+
+//All Small devices
+@media (max-width: 767px) {
+}
+
+//Large devices
+@media (min-width: 992px) {
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}

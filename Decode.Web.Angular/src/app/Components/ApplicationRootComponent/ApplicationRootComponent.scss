@@ -1,0 +1,87 @@
+@import "../../../visuals/scss/VariablesForAll.scss";
+h1.wc-h1.wc-breadcrumb{
+  color:yellow !important;
+}
+
+//Collasper
+.wc-page-collapser {
+  a {
+    display: none;
+  }
+}
+
+//Extra small devices
+@media (min-width: 576px) {
+}
+
+@media(min-width: 768px) {
+  .wc-page-collapser {
+    margin: 0 0;
+  }
+
+  .wc-page-collapser {
+
+    a {
+      color: $wc-collapser-color;
+      display: block;
+      padding: 0rem 2rem;
+      min-height: 4rem;
+    }
+
+    a:hover {
+      color: $wc-collapser-color-hover;
+    }
+
+    a:before,
+    a:after {
+      font-weight: bold;
+      font-size: 3rem;
+      content: "";
+      position: relative;
+      /*top: 1px;*/
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: bold;
+      line-height: 3rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: transform .25s linear;
+      -webkit-transition: -webkit-transform .25s linear;
+    }
+
+    a:after {
+      float: right;
+    }
+
+    a:before {
+      float: left;
+    }
+
+    a[aria-expanded="true"]:before,
+    a[aria-expanded="true"]:after {
+      content: "\2212";
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    a[aria-expanded="false"]:after,
+    a[aria-expanded="false"]:before {
+      content: "\002b";
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+}
+
+//Medium devices
+@media (max-width: 767px) {
+}
+
+//Large devices
+@media (min-width: 992px) {
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}

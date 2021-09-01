@@ -1,0 +1,14 @@
+@import "VariablesForAll.scss";
+
+nav a:visited, a:link {
+  color: $wc-nav-a-color;
+}
+
+nav a:hover {
+  color: $wc-nav-a-color-hover;
+  background-color: $wc-nav-a-background-color-hover;
+}
+
+nav a.active {
+  color: $wc-nav-a-color-active
+}

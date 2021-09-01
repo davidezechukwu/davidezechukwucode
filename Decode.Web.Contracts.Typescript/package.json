@@ -1,0 +1,49 @@
+{
+  "author": {
+    "name": "David Ezechukwu"
+  },
+  "engines": {
+    "node": ">=16.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/davidezechukwu/davidezechukwucode/tree/main/Decode.Web.Contracts.Typescript/issues"
+  },
+  "os": [
+    "win32",
+    "linux"
+  ],
+  "dependencies": {
+    "tslib": "~2.3.1"
+  },
+  "keywords": [
+    "Typescript",
+    "Interface Segregration Principle",
+    "Decode",
+    "David Ezechukwu"
+  ],
+
+  "description": "A Package containing Typescript interfaces which are shared between the Decode Typescript Loopback 4 APIs and Decode Typescript Angular Client",
+  "devDependencies": {
+    "@types/node": "~16.6.1",
+    "typescript": "~4.3.5"
+  },
+  "homepage": "https://github.com/davidezechukwu/davidezechukwucode/tree/main/Decode.Web.Contracts.Typescript",
+  "main": "index.js",
+  "name": "decode.web.contracts.typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidezechukwu/davidezechukwucode.git"
+  },
+  "license": "0BSD",
+  "scripts": {
+    "copy_package_file_win": "copy \"package.json\" \"dist\" && copy \"README.md\" \"dist\" && copy \".npmrc\" \"dist\"",
+    "copy_package_file_linux": "cp \"package.json\" \"dist\" && cp \"README.md\" \"dist\" && cp \".npmrc\" \"dist\"",
+    "build_without_copying_package_file": "tsc --build",
+    "clean": "tsc --build --clean",
+    "build-dev-win": "npm run build_without_copying_package_file && npm run copy_package_file_win",
+    "build-dev-linux": "npm run build_without_copying_package_file && npm run copy_package_file_linux",
+    "build": "npm run build_without_copying_package_file && npm run copy_package_file_win"
+  },
+  "types": "./dist/types/index.d.ts",
+  "version": "0.0.3"
+}

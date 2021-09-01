@@ -1,0 +1,10 @@
+{
+  "ids": {
+    "Cake": 2
+  },
+  "models": {
+    "Cake": {
+      "1": "{\"Name\":\"Hello World Cake\",\"Comment\":\"The Bestest\",\"ImageUrl\":\"choc-orange-1628341099858.jfif\",\"YumFactor\":1,\"ID\":\"1\"}"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="wc-fullscreen-background">
+  <main class="container wc-main-section">
+    <div dir="{{ProfileService.Language_IsRTL ? 'rtl' : 'ltr' }}">
+      <figcaption class="wc-component wc-page-collapser">
+        <a data-bs-toggle="collapse" href="#CollapsablePage" aria-expanded="true" aria-controls="CollapsablePage"></a>
+      </figcaption>
+      <div id="CollapsablePage" class="collapse show">
+        <div class="wc-page">
+          <TopMenuComponent></TopMenuComponent>
+          <router-outlet></router-outlet>
+        </div>
+      </div>      
+    </div>
+  </main>
+</div>
+<PageBackgroundComponent></PageBackgroundComponent>

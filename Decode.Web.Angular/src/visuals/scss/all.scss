@@ -1,0 +1,32 @@
+//do not aside cite makes thead build time longer
+//see https: //www.telerik.com/kendo-angular-ui/components/styling/#toc-compiling-the-theme-from-scss-source-files
+
+@use "sass:math";
+
+@import '~ngx-toastr/toastr';
+@import "Reset.scss";
+@import "VariablesForAll.scss";
+@import "Lettering.scss";
+@import "GenericComponent.scss";
+@import "GenericDetailView.scss";
+@import "GenericListView.scss";
+@import "Core.scss";
+@import "BackgroundVideo.scss";
+@import "Navigation.scss";
+@import "Dashboard.scss";
+
+//Extra small devices
+@media (min-width: 576px) {
+}
+
+//Medium devices
+@media (min-width: 768px) {
+}
+
+//Large devices
+@media (min-width: 992px) {
+}
+
+//Extra large devices
+@media (min-width: 1200px) {
+}

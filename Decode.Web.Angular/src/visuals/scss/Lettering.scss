@@ -1,0 +1,319 @@
+@import "VariablesForAll.scss";
+
+.wc-sentence::after {
+  content: ".";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $wc-main-font-family;
+}
+
+a,
+label,
+input,
+button,
+optgroup,
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=url],
+select,
+textarea {
+  font-size: 0.2rem !important;
+}
+
+h1, h1 *, .wc-h1, .wc-h1 * {
+  font-family: $wc-h1-font-family;
+}
+
+h2, .wc-h2 {
+  font-family: $wc-h2-font-family;
+  font-weight: lighter;
+}
+
+h3, .wc-h3 {
+  font-family: $wc-h3-font-family;
+  font-weight: lighter;
+}
+
+h4, .wc-h4 {
+}
+
+h5, .wc-h5 {
+}
+
+h6, .wc-h6 {
+}
+
+
+/* everywhere else */
+* {
+  font-family: $wc-main-font-family;
+  text-transform: capitalize;
+}
+
+
+.wc-page {
+
+  &.wc-jumbotron {
+
+    .wc-h1 {
+      margin-top: 0;
+      padding: 0.5rem 0 0.5rem 0.25rem;
+    }
+
+    h2, h2 > span, .wc-h2, .wc-h2 > span {
+      color: #333 !important;
+    }
+  }
+
+  .wc-main-content {
+
+    label {
+      color: $wc-main-content-label-color;
+    }
+
+    h3, .wc-h3 {
+      color: $wc-main-content-h3-color;
+    }
+
+    h4, .wc-h4 {
+      color: $wc-main-content-h4-color;
+    }
+
+    .wc-main-section {
+
+      .wc-main-section-main-content {
+
+        text-align: justify !important;
+
+        h2, h2 > *, .wc-h2, .wc-h2 > * {
+          font-family: $wc-h2-font-family
+        }
+
+        h2, h2 > span, .wc-h2, .wc-h2 > span {
+          color: $wc-main-content-h2-color;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 200px) {
+  html {
+    font-size: 32.5%;
+  }
+
+  a,
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 42.5%;
+  }
+
+  a,
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 52.5%;
+  }
+
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  textarea {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem 1.0rem;
+  }
+
+
+  label{
+  padding: 0.5rem 1.0rem 0.5rem 0;
+  }
+
+  select {
+    padding: 0.5rem 1rem 0.5rem 0.25rem;
+  }
+}
+
+.wc-button,
+input[type='submit'],
+input[type='button'],
+button {  
+  padding: 1.5rem 3rem;  
+  font-size: 2rem;  
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 65.0%;
+  }
+
+  a,
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 67.5%;
+  }
+
+  a,
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 70%;
+  }
+
+  a,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 70%;
+  }
+
+  a,
+  label,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 72.5%;
+  }
+
+  a,
+  input,
+  button,
+  optgroup,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  input[type=tel],
+  input[type=url],
+  select,
+  textarea {
+    font-size: 1.5rem !important;
+  }
+}
+

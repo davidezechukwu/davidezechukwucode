@@ -1,0 +1,53 @@
+﻿.wc-dashboard-level-0 {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  a {
+    color: #ff9933;
+  }
+
+  a:hover {
+    color: yellow;
+  }
+
+  .wc-dashboard-level-1 {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    a {
+      color: #ff9933;
+    }
+
+    a:hover {
+      color: yellow;
+    }
+
+    .wc-dashboard-level-2 {
+      list-style-type: none;
+      margin-left: 0;
+      /*padding-left: 0;*/
+      a {
+        color: #ff9933;
+      }
+
+      a:hover {
+        color: yellow;
+      }
+
+      .wc-dashboard-level-3 {
+        list-style-type: none;
+        margin-left: 0;
+        /*padding-left: 0;*/
+        a {
+          color: #ff9933;
+        }
+
+        a:hover {
+          color: yellow;
+        }
+      }
+    }
+  }
+}

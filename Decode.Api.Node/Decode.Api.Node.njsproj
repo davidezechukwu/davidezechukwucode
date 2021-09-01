@@ -1,0 +1,180 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Decode.Api.Node</Name>
+    <RootNamespace>Decode.Api.Node</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>False</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>adfc45e4-62d6-4055-ade1-7df7f625ff6b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>dist\index.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".dockerignore" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc.js" />
+    <Content Include=".gitignore" />
+    <Content Include=".mocharc.json" />
+    <Content Include=".prettierignore" />
+    <Content Include=".prettierrc" />
+    <Content Include=".vs\Decode.Api.Node\config\applicationhost.config" />
+    <Content Include=".vs\ProjectSettings.json" />
+    <Content Include=".vs\slnx.sqlite" />
+    <Content Include=".vs\tasks.vs.json" />
+    <Content Include=".yo-rc.json" />
+    <Content Include="DEVELOPING.md" />
+    <Content Include="Dockerfile" />
+    <Content Include="package.json" />
+    <Content Include="public\cake.jfif" />
+    <Content Include="public\index.html" />
+    <Content Include="README.md" />
+    <Content Include=".env">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\controllers\README.md" />
+    <Content Include="src\datasources\README.md" />
+    <Content Include="src\interceptors\README.md" />
+    <Content Include="src\models\README.md" />
+    <Content Include="src\parsers\README.md" />
+    <Content Include="src\repositories\README.md" />
+    <Content Include="src\services\README.md" />
+    <Content Include="src\types\README.md" />
+    <Content Include="src\utils\README.md" />
+    <Content Include="src\__tests__\README.md" />
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\" />
+    <Folder Include=".vs\Decode.Api.Node\" />
+    <Folder Include=".vs\Decode.Api.Node\config\" />
+    <Folder Include=".vs\Decode.Api.Node\v16\" />
+    <Folder Include="certificates\" />
+    <Folder Include="public\" />
+    <Folder Include="src\" />
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\datasources\" />
+    <Folder Include="src\interceptors\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="src\types\" />
+    <Folder Include="src\parsers\" />
+    <Folder Include="src\repositories\" />
+    <Folder Include="src\services\" />
+    <Folder Include="src\__tests__\" />
+    <Folder Include="src\__tests__\acceptance\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\application.ts" />
+    <TypeScriptCompile Include="src\binding-keys.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\controllers\cake.controller.ts" />
+    <TypeScriptCompile Include="src\controllers\index.ts" />
+    <TypeScriptCompile Include="src\controllers\health-status.controller.ts" />
+    <TypeScriptCompile Include="src\controllers\super.controller.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\datasources\cake.datasource.ts" />
+    <TypeScriptCompile Include="src\datasources\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\index.ts" />
+    <TypeScriptCompile Include="src\interceptors\cake.interceptor.ts" />
+    <TypeScriptCompile Include="src\interceptors\index.ts" />
+    <TypeScriptCompile Include="src\interceptors\request-validator.interceptor.ts" />
+    <TypeScriptCompile Include="src\interceptors\swagger-bug.interceptor.ts" />
+    <TypeScriptCompile Include="src\migrate.ts" />
+    <TypeScriptCompile Include="src\models\cake.model.ts" />
+    <TypeScriptCompile Include="src\models\index.ts" />
+    <TypeScriptCompile Include="src\openapi-spec.ts" />
+    <TypeScriptCompile Include="src\OperationSecuritySpec.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\parsers\cake-multipart-form-data-parser.ts" />
+    <TypeScriptCompile Include="src\parsers\index.ts" />
+    <TypeScriptCompile Include="src\parsers\super-multipart-form-data-parser.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\repositories\cake.repository.ts" />
+    <TypeScriptCompile Include="src\repositories\index.ts" />
+    <TypeScriptCompile Include="src\sequence.ts" />
+    <TypeScriptCompile Include="src\services\file-upload.service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\services\index.ts" />
+    <TypeScriptCompile Include="src\types\file-upload-handler.ts" />
+    <TypeScriptCompile Include="src\types\index.ts" />
+    <TypeScriptCompile Include="src\utils\error-handling-utils.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\file-utils.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\http-method-decorators.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\utils\index.ts" />
+    <TypeScriptCompile Include="src\__tests__\acceptance\home-page.acceptance.ts" />
+    <TypeScriptCompile Include="src\__tests__\acceptance\ping.controller.acceptance.ts" />
+    <TypeScriptCompile Include="src\__tests__\acceptance\test-helper.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>src/index.ts</StartAction>
+          <AspNetDebugging>False</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
