@@ -27,7 +27,8 @@ This mono-repo was a proof of concept and an evaulation of Loopback4 as an ORM a
 There is a new version of it, based largely on what is here. This is only availalble to potential employers.
 It is also the backend for www.pikin.co; and also something I intend to use for other projects. 
 The demo frontend for www.pikin.co is a work of art and like all works of art, I believe, it should be on the public domain :)
-The APIs and Databases too are works of art. 
+It is a showcase of my frontend skills, something on my CV and I guess employees would need to see it. 
+The APIs and Databases too are works of art however they are on private repos
 
 Loopback4 is a great improvement from from Loopback 3, however it lacks support for Composite Keys in Objects. 
 Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form, with easier Covering Indexes(:))
