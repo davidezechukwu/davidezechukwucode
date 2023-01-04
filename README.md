@@ -19,6 +19,7 @@ This repo contains three projects (outdated, see notes below)
 <li>E-tags caching, redis caching for lookups, etc, and public files(images, video, audio, svgs, etc) on external providers. 
 <li>Typedoc documentation</li>
 <li>denormalisation for non-transactional use cases, using AWS Elastic Search for example</li>
+<li>Use of ETL when applicable, from say SSIS or similiar from here https://www.softwaretestinghelp.com/best-etl-tools/</li>
 </ul>
 
 <H1>Notes</h1>
