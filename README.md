@@ -2,7 +2,7 @@
 
 <H1>Notes</h1>
 <p>
-This mono-repo was a Proof of Concept; and an evaulation of Loopback4 as an ORM and API library. 
+This mono-repo was a Proof of Concept; and an evaulation of [Loopback4](https://loopback.io/doc/en/lb4/) as an ORM and API library. 
 There is a newer version of it, based largely on what is here, and only availalble on request.
 It is also the backend for www.pikin.co; and also something I intend to use for other projects. 
 www.pikin.co is a work of art and like all works of art, I believe, it should be on the public domain :)
