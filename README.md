@@ -22,7 +22,7 @@ Typescript and Javascript (in its latest ES2022 version) have grown up immensely
 Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. The choice between string or number IDs has trade-offs, i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numbers are more performant as more DISK IO PAGES could be crammed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory that do not require any physically spinning DISK MEDIA.  Number-based IDs are subject to attacks though, 
 <br/>
 <br/>
-ie someone doing ``/getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, etc``. 
+ie someone doing <code>/getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, etc</code>. 
 <br/>
 <br/>
 Some databases have features to detect such, by purposely skipping on the generated ID sequence, 
