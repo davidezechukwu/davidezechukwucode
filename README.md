@@ -20,22 +20,22 @@ Both have trade-off, i.e numbers(8,16,32,64bits) are quicker as they occupy less
 hence this makes numbers more performant as more db pages could be cramed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap (DISK IO activities are much faster on solid memory). Number based IDs are subject to attacks though, 
 <br/>
 <br/>
-ie someone doing <strong style="color:green"> /getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, </strong>etc. 
+ie someone doing ``<strong> /getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, </strong> etc``. 
 <br/>
 <br/>
 Some database have features to detect such, by purposely skipping on the generated ID sequence, 
 <br/>
 <br/>
-i.e by skipping on the ID sequence and generating <strong style="color:green">user:1, user:4, user:5, user:9, user:11,</strong> etc; 
+i.e by skipping on the ID sequence and generating ``<strong>user:1, user:4, user:5, user:9, user:11,</strong> etc``; 
 <br/>
 <br/>
-Any call to <strong style="color:green">getuser/2</strong> in the example given above, is either a programming error or a malicious attack :) 
+Any call to ``<strong>getuser/2</strong>`` in the example given above, is either a programming error or a malicious attack :) 
 <br/>
 <br/>
 Backend(s)/database(s) repo availablel on request
 </p>
 
-This repo contains three projects (outdated, see notes below)
+This repo contains three outdated projects (see notes above)
 <ul>
   <li><h2>Decode.Api.Node</h2><p>This is a Typescript Loopback 4 based Restful API</p></li>
   <li><h2>Decode.Web.Angular</h2><p>This is a Typescript Angular 12 based Client</p></li>
