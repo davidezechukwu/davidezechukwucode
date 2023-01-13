@@ -9,11 +9,14 @@ www.pikin.co is a work of art and like all works of art, I believe, it should be
 It is a showcase of my frontend skills, and also on my CV. 
 The new version of this mono-repo and its Databases are works of art too
 <br/>
+<br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
 Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form). However, it is sometimes undesirable to be restricted to None-Composite Keys as Composite Keys do come in handy in some use cases. 
 Support for Express Middleware seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. 
 <br/>
+<br/>
 Typescript is used extensively in this Mono-Repo across the clients, servers, and Databases(if MongoDb or similar is opted for). Having one core language, such as Typescript, reduces the skills required for team members. 
+<br/>
 <br/>
 Typescript and Javascript (in its latest ES2022 version) have grown up immensely over the past few years; they offer (nearly) almost the same
 Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. The choice between string or number IDs has trade-offs, i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numbers are more performant as more DISK IO PAGES could be crammed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory that do not require any physically spinning DISK MEDIA.  Number-based IDs are subject to attacks though, 
