@@ -19,7 +19,7 @@ Typescript is used extensively in this Mono-Repo across the clients, servers, an
 <br/>
 <br/>
 Typescript and Javascript (in its latest ES2022 version) have grown up immensely over the past few years; they offer (nearly) almost the same
-Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. The choice between string or number IDs has trade-offs, i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numbers are more performant as more DISK IO PAGES could be crammed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory that do not require any physically spinning DISK MEDIA.  Number-based IDs are subject to attacks though, 
+Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. The choice between string or number IDs has trade-offs; i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numbers are more performant as more DISK IO PAGES could be crammed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory that do not require any physically spinning DISK MEDIA.  Number-based IDs are subject to attacks though, 
 <br/>
 <br/>
 ie someone doing <code>/getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, etc</code>. 
@@ -28,10 +28,10 @@ ie someone doing <code>/getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, e
 Some databases have features to detect such, by purposely skipping on the generated ID sequence, 
 <br/>
 <br/>
-i.e by skipping on the ID sequence and generating ``user:1, user:4, user:5, user:9, user:11, etc``; 
+i.e by skipping on the ID sequence and generating <code>user:1, user:4, user:5, user:9, user:11, etc</code>; 
 <br/>
 <br/>
-Any call to ``getuser/2`` in the example given above, is either a programming error or a malicious attack :) 
+Any call to <code>getuser/2</code> in the example given above, is either a programming error or a malicious attack :) 
 <br/>
 <br/>
 Backend(s)/database(s) repo available on request
