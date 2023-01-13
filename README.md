@@ -1,5 +1,31 @@
 # davidezechukwucode
 
+<H1>Notes</h1>
+<p>
+This mono-repo was a Proof of Concept; and an evaulation of Loopback4 as an ORM and API library. 
+There is a newer version of it, based largely on what is here, and only availalble on request.
+It is also the backend for www.pikin.co; and also something I intend to use for other projects. 
+www.pikin.co is a work of art and like all works of art, I believe, it should be on the public domain :)
+It is a showcase of my frontend skills, and also on my CV. 
+The new version of this mono-repo and it's Databases are works of art too
+
+Loopback4 is a great improvement from from Loopback 3, however it lacks support for Composite Keys. 
+Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form). However it is sometimes undesireable being forced to use not to use Composite keys as do come in handy in some usecases. 
+Support for Express middleware seems patchy too, unless one hosts the Loopback4 Application as a route on an Express Application. 
+
+Typescript is used this mono-repo (server, client and db if mongodb or similiar is chosen), with a shared library containing the common contracts shared by the servers and clients and database. Having one core language also reduces the skills required for team members etc etc. 
+Typescript and Javascript (in its latest ES2022 version) have grown up immensenly over the past few years; they offer (nearly) almost the same
+generic functionality as the old C++ STL do and still does. Heavy use of Generics is made use of on the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; it could be based on either on strings(Guids for exmple) or numbers. 
+Both have trade-off, i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; DISK IO is the slowest activity as far as databases go;
+hence this makes numbers more performant as more db pages could be cramed into memory with each DISK IO READ. This might not be such a big issue these days when solid memory is cheap (DISK IO activities are much faster on solid memory). Number based IDs are subject to attacks though, 
+ie someone doing /getuser/1, getuser/2, getuser/3 etc etc. 
+Some database have features to detect such, by purposely skipping on the generated ID sequence, 
+i.e user:1, user:4, user:5; 
+Any call to getuser/2, above, is either a programming error or a malicious attack :) 
+
+Backend(s)/database(s) repo availablel on request
+</p>
+
 This repo contains three projects (outdated, see notes below)
 <ul>
   <li><h2>Decode.Api.Node</h2><p>This is a Typescript Loopback 4 based Restful API</p></li>
@@ -21,34 +47,3 @@ This repo contains three projects (outdated, see notes below)
 <li>denormalisation for non-transactional use cases, using AWS Elastic Search for example</li>
 <li>Use of ETL when applicable, from say SSIS or similiar from here https://www.softwaretestinghelp.com/best-etl-tools/</li>
 </ul>
-
-<H1>Notes</h1>
-<p>
-This mono-repo was a proof of concept and an evaulation of Loopback4 as an ORM and API library. 
-There is a new version of it, based largely on what is here. This is only availalble to potential employers.
-It is also the backend for www.pikin.co; and also something I intend to use for other projects. 
-The demo frontend for www.pikin.co is a work of art and like all works of art, I believe, it should be on the public domain :)
-It is a showcase of my frontend skills, something on my CV and I guess employees would need to see it. 
-The APIs and Databases too are works of art however they are on private repos
-
-Loopback4 is a great improvement from from Loopback 3, however it lacks support for Composite Keys in Objects. 
-Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form, with easier Covering Indexes(:))
-It is sometimes undesireable being forced to that, as composite keys do come in handy in some use cases. 
-Support for Express middleware seems patchy too, unless one hosts the Loopback4 Application as a route on an Express Application. 
-
-Typescript is used through the API(s) and Client(s), with a shared library containing the Interface definitions for API Endpoint 
-Request and Response objects. Having one core language also reduces the skills required for team members etc etc. 
-Typescript(and Javascript in its latest ES2022 version) have grown up immensenly over the past few years and offers (nearly) almost the same
-functional generic functionality as the C++ STL does. Hence the backend makes heavy use of generics. The ID of the objects, for example, 
-is based on on a changable type, hence giving the APIs the option of using, integer based IDs or GUIDs, for example. 
-Both have trade-off, i.e intergers are quicker being smaller and all. This might not be such a big issue, in these days where solid memory is cheap
-They are subject to attacks thu, ie someone doing /getuser/1, getuser/2, getuser/3 etc etc. Some database have features to detect such, by purposely 
-skipping on the generated ID sequence, i.e user:1, user:4, user:5; with these any call to getuser/2 is either a programming error or a malicious attack :) 
-
-Backend(s)/database(s) availablel on request
-
-
-
-
-
-</p>
