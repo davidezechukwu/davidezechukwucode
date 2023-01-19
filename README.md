@@ -11,7 +11,7 @@ The new version of this mono-repo and its Databases are works of art too
 <br/>
 <br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
-Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form). However, it is sometimes undesirable to be restricted to None-Composite Keys as Composite Keys do come in handy in some use cases. 
+Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form), it is sometimes undesirable to be restricted to just to None-Composite Keys; as Composite Keys do come in handy in some use cases. 
 Support for Express Middleware seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. 
 <br/>
 <br/>
