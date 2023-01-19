@@ -12,10 +12,12 @@ The new version of this mono-repo and its Databases are works of art too
 <br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
 Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form), it is sometimes undesirable to be restricted to just to None-Composite Keys; as Composite Keys do come in handy in some use cases. 
-Support for Express Middleware seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. 
+Support for Express Middleware seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM can Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though offering just Seeding and Updates; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required to handle more advanced migrations such as Versioned Updates and Downgrades steps. 
+
 <br/>
 <br/>
-Typescript is used extensively in this Mono-Repo across the clients, servers, and Databases(if MongoDb or similar is opted for). Having one core language, such as Typescript, reduces the skills required for team members. 
+Typescript is used extensively in this Mono-Repo, across the clients, servers, and even Databases(if the Javascript Script MongoDb or similar is opted for). 
+Having one core language, such as Typescript, reduces the skills required for team members. 
 <br/>
 <br/>
 Typescript and Javascript (in its latest ES2022 version) have grown up immensely over the past few years; they offer (nearly) almost the same
