@@ -11,12 +11,12 @@ The new version of this mono-repo and its Databases are works of art too
 <br/>
 <br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
-Whilst this may be good for optimal performance on transactional queries involving tables in 4th Normal Form(as it is inherently easier to create covering indexes in this form), it is sometimes undesirable to be restricted to just to None-Composite Keys; as Composite Keys do come in handy in some use cases. 
-Support for Express Middleware seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM can Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though offering just Seeding and Updates; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required to handle more advanced migrations such as Versioned Updates and Downgrades steps. 
+Whilst this may be good for optimal performance on transactional queries involving tables in <strong>4th Normal Form</strong>(as it is inherently easier to create covering indexes in this <strong>Form</strong>), it is sometimes undesirable to be restricted to just to <strong>None-Composite</strong> Keys; as <strong>Composite Keys</strong> do come in handy in some use cases. 
+Support for <strong>Express Middleware</strong> seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM can Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though offering just <strong>Seeding</strong> and <strong>Upgrades</strong>; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required to handle more advanced migrations such as <strong>Versioned Updategrade and Downgrade</strong>steps. 
 
 <br/>
 <br/>
-Typescript is used extensively in this Mono-Repo, across the clients, servers, and even Databases(if the Javascript Script MongoDb or similar is opted for). 
+<strong>Typescript</strong> is used extensively in this Mono-Repo, across the clients, servers, and even Databases(if the <strong>Javascript/JSON-based</strong> Database such as <strong>MongoDb</strong> or similar is opted for, when applicable). 
 Having one core language, such as Typescript, reduces the skills required for team members. 
 <br/>
 <br/>
