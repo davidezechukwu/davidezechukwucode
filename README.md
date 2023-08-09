@@ -8,7 +8,6 @@ It is also the backend for www.pikin.co; and also something I intend to use for 
 www.pikin.co is a work of art and like all works of art, I believe, it should be in the public domain :)
 It is a showcase of my frontend skills, and also on my CV. 
 The new version of this mono-repo (https://github.com/davidezechukwu/pik) and its Databases are works of art too
-Temporarily condensed and available at https://github.com/davidezechukwu/pik as a monorepo
 <br/>
 <br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
