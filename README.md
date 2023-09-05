@@ -3,11 +3,29 @@
 <H1>Notes</h1>
 <p>
 This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://loopback.io/doc/en/lb4/) as an ORM and API library. 
+
+
+
+This is available here for preview at: https://decodeonline.app
+
+Its UX POC counterpart is available for preview at: http://www.pikin.co
+
+
+
+https://decodeonline.app is a Loopback4 RESTFUL API and set of microservices(for SMS, Email, etc. Notifications and Periodic Reporting that supports XML, HTML, Excel, PDF, Text, and JSON localized and globalized output content types. It is datastore-agnostic i.e. it could use MongoDB, Postgres, MSSQL, Web Services, etc). It also has a really nice HealthCheck which renders its output as either HTML, XML, JSON, or Text based on context. the normal JSON output is converted to XML which is then converted on the fly to XHTML, see the Browser HTML output at: https://decodeonline.app/api/v1/healthcheck/healthstatus
+
+
+
+http://www.pikin.co is the UX POC counterpart, that supports localization (left & right languages) and globalization, and a layered client architecture; it work of art, and like all works of art, I believe, it should be in the public domain 
+
+
+
 There is a newer version of this Repo, based largely on what is here, and only available on request.
-It is also the backend for www.pikin.co; and also something I intend to use for other projects. 
-www.pikin.co is a work of art and like all works of art, I believe, it should be in the public domain :)
-It is a showcase of my frontend skills, and also on my CV. 
-The new version of this mono-repo (https://github.com/davidezechukwu/pik) and its Databases are works of art too.
+
+The newer version of this mono-repo has been broken up into several NPM packages, with a shared core package that contains the contracts (Interfaces & Super (Base) Partial and Fully Abstract classes) which is shared between the API, Microservices, 
+
+and Clients( Web, Mobile App, etc). This ensures consistency across the application layers (Typescript enforces compile-time checks to make sure these contracts are adhered to by the clients and backend servers)
+
 <br/>
 <br/>
 Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
@@ -47,16 +65,16 @@ This repo contains three outdated projects (see notes above)
 </ul>
 <h2>Further improvements</h2>
 <ul>  
-  <li>Automated e2e testing on different browsers using automated BrowserStack device profiles</li>
+  <li>Near-ish 100% Automated e2e testing on different browsers using automated BrowserStack device profiles</li>
   <li>Near-ish 100% Unit Test Code Coverage from NYC or Instabul or similar </li>
-  <li>Dockerisation and Orchestration for dev environment</li>
-  <li>Authentication - using a diverse range (2 Factor? SAML2, 2 & 3 Factor Forms Authentication, 2 Factor? OAuth 2.0, 2 Factor? OpenID)</li>
-  <li>Switch to either the free Postgres or MongoDB or MySQL or MS SQL Express or the none-free MS SQL Server or Oracle</li>
-  <li>Switch to the free Nginx to host entry (HTTPS) website and API, together with other subdomains using (HTTP) reverse proxies </li>
-  <li>Switch to Jenkins or similar and use Octopus or similar to handle deployments and environment variable switching and hiding</li>
-  <li>Completion of an ultra-fast localization and globalization, hopefully, client-based, for literally anywhere on earth; payments to Google required or failing that, bypassing CORS via some catastrophic and yet unknown failure of CORS protection, unlikey</li>
+  <li><s>Dockerisation and Orchestration for the dev and test (and staging possibly) environments</s></li>
+  <li><s>Authentication - using a diverse range (2 Factor? SAML2, 2 & 3 Factor Forms Authentication, 2 Factor? OAuth 2.0, 2 Factor? OpenID)</s><i>Partially</i></li>
+  <li><s>Switch to either the free Postgres or MongoDB or MySQL or MS SQL Express or the none-free MS SQL Server or Oracle</s></li>
+  <li><s>Switch to the free Nginx to host entry (HTTPS) website and API, together with other subdomains using (HTTP) reverse proxies</s><i>Done with some Technical debts</i></li>
+  <li><s>Switch to Jenkins or similar and use Octopus or similar to handle deployments and environment variable switching and hiding</s><i>Azure DevOps(with cron/pm2/azure vms/unix shell scripts, docker(including a dockerised SMTP server) used in dev, test   and staging?)</i></li>
+  <li><s>Completion of an ultra-fast localization and globalization, hopefully, client-based, for literally anywhere on earth; payments to Google required or failing that, bypassing CORS via some catastrophic and yet unknown failure of CORS protection, unlikey</s></li>
 <li>E-tags caching, Redis caching for lookups, etc, and public files(images, video, audio, SVGs, etc) on external providers. 
-<li>Typedoc documentation</li>
-<li> Denormalization for non-transactional use cases, using AWS Elastic Search, for example</li>
+<li><s>Typedoc documentation</s> <i>This is now auto-compiled from the source code and made available on the main swagger endpoint as wikis and external links</i></li>
+<li><s>Denormalization for non-transactional use cases, using AWS Elastic Search</s> <i>Partially</i></li>
 <li>Use of ETL when applicable, using either MS SSIS or similar (more available from here https://www.softwaretestinghelp.com/best-etl-tools/)</li>
 </ul>
