@@ -4,7 +4,7 @@
 <p>
 This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://loopback.io/doc/en/lb4/) as an ORM and API library. 
 <p>
-<blink><strong>Please do not attempt to install as the installation documentation on this partiular repo is outdated and incomplete</strong></blink>
+<blink><strong>Please do not attempt to install as the installation documentation on the README.md of this particular repo is outdated and incomplete</strong></blink>
 </p>
 
 This is available here for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa, RTL) localisation. 
