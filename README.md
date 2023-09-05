@@ -6,7 +6,7 @@ This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://lo
 
 
 
-This is available here for preview at: https://decodeonline.app
+This is available here for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa, RTL) localisation. 
 
 Its UX POC counterpart is available for preview at: http://www.pikin.co
 
@@ -77,4 +77,8 @@ This repo contains three outdated projects (see notes above)
 <li><s>Typedoc documentation</s> <i>This is now auto-compiled from the source code and made available on the main swagger endpoint as wikis and external links</i></li>
 <li><s>Denormalization for non-transactional use cases, using AWS Elastic Search</s> <i>Partially</i></li>
 <li>Use of ETL when applicable, using either MS SSIS or similar (more available from here https://www.softwaretestinghelp.com/best-etl-tools/)</li>
+<li>More concise and expansive document using Typedoc, cuurrently less than 15% of object are documented (most times badly)</li>
+<li>Improve README.md for all packages, including step by step instructures on how to setup a dev and live test environment, acquisition and handling of private/public keys from a shared Vault, SSL Certificates, endpoints, etc</li>
+<li>Tidy up the documentatiion landing page at https://decodeonline.app/api/v1/docs/index.html (adding links to Sharepoint, Jira)</li>
+<li>Support more languages beside english (en), french (fr) & punjanbi (pa, RTL) localisation. Note that locaised Copy(Text) and media are device-dependent, ie a text on a browser might be longer and more verbose than that on a small screen mobile phone or Rasperry Pi type device</li>  
 </ul>
