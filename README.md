@@ -3,8 +3,9 @@
 <H1>Notes</h1>
 <p>
 This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://loopback.io/doc/en/lb4/) as an ORM and API library. 
-
-
+<p>
+<blink><strong>Please do not attempt to install as the installation documentation on this partiular repo is outdated and incomplete</strong></blink>
+</p>
 
 This is available here for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa, RTL) localisation. 
 
@@ -79,6 +80,6 @@ This repo contains three outdated projects (see notes above)
 <li>Use of ETL when applicable, using either MS SSIS or similar (more available from here https://www.softwaretestinghelp.com/best-etl-tools/)</li>
 <li>More concise and expansive document using Typedoc, cuurrently less than 15% of object are documented (most times badly)</li>
 <li>Improve README.md for all packages, including step by step instructures on how to setup a dev and live test environment, acquisition and handling of private/public keys from a shared Vault, SSL Certificates, endpoints, etc</li>
-<li>Tidy up the documentatiion landing page at https://decodeonline.app/api/v1/docs/index.html (adding links to Sharepoint, Jira)</li>
-<li>Support more languages beside english (en), french (fr) & punjanbi (pa, RTL) localisation. Note that locaised Copy(Text) and media are device-dependent, ie a text on a browser might be longer and more verbose than that on a small screen mobile phone or Rasperry Pi type device</li>  
+<li>Tidy up the documentation landing page at https://decodeonline.app/api/v1/docs/index.html (adding links to Sharepoint, Jira)</li>
+<li>Support more languages; beside english (en), french (fr) & punjanbi (pa, RTL) localisation. Note that localised Text and other media are device-dependent, ie a text on a browser might be longer and more verbose than that on a small screen mobile phone or RasperryPi-type device</li>  
 </ul>
