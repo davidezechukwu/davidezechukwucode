@@ -13,7 +13,8 @@ Its UX POC counterpart is available for preview at: http://www.pikin.co
 
 
 
-https://decodeonline.app is a Loopback4 RESTFUL API and set of microservices(for SMS, Email, etc. Notifications and Periodic Reporting that supports XML, HTML, Excel, PDF, Text, and JSON localized and globalized output content types. It is datastore-agnostic i.e. it could use MongoDB, Postgres, MSSQL, Web Services, etc). It also has a really nice HealthCheck which renders its output as either HTML, XML, JSON, or Text based on context. the normal JSON output is converted to XML which is then converted on the fly to XHTML, see the Browser HTML output at: https://decodeonline.app/api/v1/healthcheck/healthstatus
+https://decodeonline.app is a Loopback4 RESTFUL API and set of microservices(for SMS, Email, etc. Notifications and Periodic Reporting that supports XML, HTML, Excel, PDF, Text, and JSON localized and globalized output content types. It is datastore-agnostic i.e. it could use MongoDB, Postgres, MSSQL, Web Services, etc). It also has a really nice HealthCheck which renders its output as either HTML, XML, JSON, or Text based on context. the normal JSON output is converted to XML which is then converted on the fly to XHTML, see the Browser HTML output at: https://decodeonline.app/api/v1/healthcheck/healthstatus. 
+There is a local(ideal for the development environment) dockerised SMTP server and an email client available at https://decodeonline.app/api/emails 
 
 
 
