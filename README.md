@@ -83,4 +83,5 @@ This repo contains three outdated projects (see notes above)
 <li>Improve README.md for all packages, including step by step instructures on how to setup a dev and live test environment, acquisition and handling of private/public keys from a shared Vault, SSL Certificates, endpoints, etc</li>
 <li>Tidy up the documentation landing page at https://decodeonline.app/api/v1/docs/index.html (adding links to Sharepoint, Jira)</li>
 <li>Support more languages; beside english (en), french (fr) & punjanbi (pa, RTL) localisation. Note that localised Text and other media are device-dependent, ie a text on a browser might be longer and more verbose than that on a small screen mobile phone or RasperryPi-type device</li>  
+<li>Add maintainance page, early-warning of maintenance schedule to logged on users, proper site shutdown </li>
 </ul>
