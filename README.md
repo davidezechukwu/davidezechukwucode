@@ -7,7 +7,7 @@ This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://lo
 <blink><strong>Please do not attempt to install as the installation documentation on the README.md of this particular repo is outdated and incomplete</strong></blink>
 </p>
 
-This is available here for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa, RTL) localisation. 
+This is available here for preview at: https://decodeonline.app/api with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa, RTL) localisation. 
 
 Its UX POC counterpart is available for preview at: http://www.pikin.co
 
