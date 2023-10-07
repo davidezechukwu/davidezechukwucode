@@ -7,12 +7,13 @@ This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://lo
 <blink><strong>Please do not attempt to install as the installation documentation on the README.md of this particular repo is outdated and incomplete</strong></blink>
 </p>
 
-The API is available for preview at: https://decodeonline.app/api with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa) & urdu (ur, RTL)localisation. 
-The Responsive Website client is available for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa) & urdu (ur, RTL)localisation. 
-The IOS/Andriod/? Mobile App clients are available for preview at: [TODO:]. [TODO:]. [TODO:]. 
-The micro(Rasperry Pi)/IOT(Azure/AWS/Google) clients are available for preview at: [TODO:] 
-A more advanced Responsive Website client Proof Of Concept is available for preview at: http://www.pikin.co
-
+<UL>
+<LI><H5>The API is available for preview at: https://decodeonline.app/api with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa) & urdu (ur, RTL)localisation. </H5></LI>
+<LI><H5>The Responsive Website client is available for preview at: https://decodeonline.app with "web" device( web browser, default) english (en), french (fr) & punjanbi (pa) & urdu (ur, RTL)localisation. </H5></LI>
+<LI><H5>The IOS/Andriod/? Mobile App clients are available for preview at: [TODO:]. [TODO:]. [TODO:]. </H5></LI>
+<LI><H5>The micro(Rasperry Pi)/IOT(Azure/AWS/Google) clients are available for preview at: [TODO:] </H5></LI>
+<LI><H5>A more advanced Responsive Website client Proof Of Concept is available for preview at: http://www.pikin.co</H5></LI>
+</UL>
 https://decodeonline.app is a Loopback4 RESTFUL API and set of microservices(for SMS, Email, etc. Notifications and Periodic Reporting that supports XML, HTML, Excel, PDF, Text, and JSON localized and globalized output content types. It is datastore-agnostic i.e. it could use MongoDB, Postgres, MSSQL, Web Services, etc). It also has a really nice HealthCheck which renders its output as either HTML, XML, JSON, or Text based on context. the normal JSON output is converted to XML which is then converted on the fly to XHTML, see the Browser HTML output at: https://decodeonline.app/api/v1/healthcheck/healthstatus. 
 There is a local(ideal for the development environment) dockerised SMTP server and an email client available at https://decodeonline.app/api/emails 
 
