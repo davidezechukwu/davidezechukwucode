@@ -69,6 +69,13 @@ This repo contains three outdated projects (see notes above)
 </ul>
 <h2>Further improvements</h2>
 <ul>  
+  <li>Container Image Management & Security</li>
+  <li>Istio integreation</li>
+  <li>Helmfile and Hem Charts integreation</li>  
+  <li>Azure Resource Manager (ARM) Templates & Blueprints</li>
+  <li>Azure API Gateway</li>
+  <li>Azure IAM and Policies</li>
+  <li>Load, Chaos and Performance Testing</li>    
   <li>Near-ish 100% Automated e2e testing on different browsers using automated BrowserStack device profiles</li>
   <li>Near-ish 100% Unit Test Code Coverage from NYC or Instabul or similar </li>
   <li><s>Dockerisation and Orchestration for the dev and test (and staging possibly) environments</s></li>
