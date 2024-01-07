@@ -1,3 +1,4 @@
+
 # davidezechukwucode
 
 <H1>Notes</h1>
@@ -14,55 +15,89 @@ This mono-repo was a Proof of Concept; and an evaluation of Loopback4(https://lo
 <LI><H5>The micro(Rasperry Pi)/IOT(Azure/AWS/Google) clients are available for preview at: [TODO:] </H5></LI>
 <LI><H5>A more advanced Responsive Website client Proof Of Concept is available for preview at: http://www.pikin.co</H5></LI>
 </UL>
-https://decodeonline.app is a Loopback4 RESTFUL API and set of microservices(for SMS, Email, etc. Notifications and Periodic Reporting that supports XML, HTML, Excel, PDF, Text, and JSON localized and globalized output content types. It is datastore-agnostic i.e. it could use MongoDB, Postgres, MSSQL, Web Services, etc). It also has a really nice HealthCheck which renders its output as either HTML, XML, JSON, or Text based on context. the normal JSON output is converted to XML which is then converted on the fly to XHTML, see the Browser HTML output at: https://decodeonline.app/api/v1/healthcheck/healthstatus. 
-There is a local(ideal for the development environment) dockerised SMTP server and an email client available at https://decodeonline.app/emails
-This is also temporarily available in production. 
+<strong>https://decodeonline.app</strong> is a <strong>Loopback4 RESTFUL API</strong> and set of microservices that  handle Periodic Reporting  and Notifications using <strong>SMS, Email, Skype, iMessenger </strong>amonst others. 
+It supports <strong>XML, HTML, Excel, PDF, Text</strong>, and <strong>JSON</strong> output conten types. 
+Outputs are <strong>localized</strong> and <strong>globalized</strong>. 
 
+The API is <strong>datastore-agnostic</strong> i.e. it could use <strong>MongoDB, Postgres, MSSQL</strong> or even another <strong>Web Services</strong> as it's data store. 
 
+It also has a really nice <strong>HealthCheck</strong> which renders its output as either <strong>HTML, XML, JSON, or Text </strong>.  All API Endpoints allow the on-the-fly conversion of output to  to XHTML using XSLT, 
+see the Browser HTML output at: <strong>https://decodeonline.app/api/v1/healthcheck/healthstatus.</strong> for an example of this.
 
-http://www.pikin.co is the UX POC counterpart, that supports localization (left & right languages) and globalization, and a layered client architecture; it work of art, and like all works of art, I believe, it should be in the public domain 
+There is a dockerised development <strong>SMTP</strong> server and an email client available at <strong>https://decodeonline.app/emails</strong>
 
-
+<strong>http://www.pikin.co</strong> is the UX POC counterpart, that supports localization (left & right languages) and globalization, and a layered client architecture; it <strong>work of art</strong>, and like all works of art, I believe, it should be in the public domain 
 
 There is a newer version of this Repo, based largely on what is here, and only available on request.
 
-The newer version of this mono-repo has been broken up into several NPM packages, with a shared core package that contains the contracts (Interfaces & Super (Base) Partial and Fully Abstract classes) which is shared between the API, Microservices, 
+The newer version of this mono-repo has been broken up into several NPM packages, with a shared core package that contains the contracts (Interfaces & Super (Base) Partial and Fully Abstract classes) which is shared between the API, Microservices, and Clients( Web, Mobile App, etc). This ensures consistency across the application layers (Typescript enforces compile-time checks to make sure these contracts are adhered to by the clients and backend servers)
 
-and Clients( Web, Mobile App, etc). This ensures consistency across the application layers (Typescript enforces compile-time checks to make sure these contracts are adhered to by the clients and backend servers)
-
-<br/>
-<br/>
-Loopback4 is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
+<strong>Loopback4</strong> is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
 Whilst this may be good for optimal performance on transactional queries involving tables in <strong>4th Normal Form</strong>(as it is inherently easier to create covering indexes in this <strong>Form</strong>), it is sometimes undesirable to be restricted to just to <strong>None-Composite</strong> Keys; as <strong>Composite Keys</strong> do come in handy in some use cases. 
+
 Support for <strong>Express Middleware</strong> seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM can Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though offering just <strong>Seeding</strong> and <strong>Upgrades</strong>; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required to handle more advanced migrations such as <strong>Versioned Updategrade and Downgrade</strong>steps. 
 
-<br/>
 <br/>
 <strong>Typescript</strong> is used extensively in this Mono-Repo, across the clients, servers, and even Databases(if the <strong>Javascript/JSON-based</strong> Database such as <strong>MongoDb</strong> or similar is opted for, when applicable). 
 Having one core language, such as Typescript, reduces the skills required for team members. 
 <br/>
 <br/>
-Typescript and Javascript (in its latest ES2022 version) have grown up immensely over the past few years; they offer (nearly) almost the same
-Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. The choice between string or number IDs has trade-offs; i.e numbers(8,16,32,64bits) are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numbers are more performant as more data records could be crammed into memory with each DISK IO READ using the smaller size numeric types. A table with 4 16 Bytes GUID foreign keys when a 1 BYTE number key will have (16 * 4) - 4 (60) BYTES redundant BYTES, when applied to a stardand Person Table in 3rd Normal Formal (ID : GUID(16BYTES), Firstname: STRING(35 BYTES), LastName: STRING(35 BYTES), NoOfDependants(1BYTES), Age:TINYINT(1BYTE), GenderID:GUID(16BYTES), TitleId:GUID(16BYTES)) == 120 BYTES in total, would mean 266 records in a standard SQL Srver type 32KB poage. 
-Constrast this with the 355 records when SMALLINTs are used,  (ID : GUID(16BYTES), Firstname: STRING(35 BYTES), LastName: STRING(35 BYTES), NoOfDependants(1BYTES), Age:TINYINT(1BYTE), GenderID:TINYINT(1BYTE), TitleId:TINYINT(1BYTE)) == 90 BYTES, a massive 33% increase! at least on paper, more if the table is small enough to live in completely in memory.  This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory that do not require any physically spinning DISK MEDIA.  Number-based IDs are subject to attacks though, 
+<strong>Typescript and Javascript</strong> (in its latest ES2022 version) have grown up immensely over the past few years; they offer (nearly) almost the same
+Generic(Template) Functionality as C++ STL does hence heavy use of Generics is made throughout the repo; aiding in the keeping to the Open And Closed Principle. The ID of the objects, for example, is based on a Generic Type; which could be instantiated as a string(GUID, for example) or a number. 
 <br/>
 <br/>
-ie someone doing <code>/getuser/1, getuser/2, getuser/3, getuser/4, getuser/5, etc</code>. 
-<br/>
-<br/>
-Some databases have features to detect such, by purposely skipping on the generated ID sequence, 
-<br/>
-<br/>
-i.e by skipping on the ID sequence and generating <code>user:1, user:4, user:5, user:9, user:11, etc</code>; 
-<br/>
-<br/>
-Any call to <code>getuser/2</code> in the example given above, is either a programming error or a malicious attack :) 
-<br/>
-<br/>
-Backend(s)/database(s) repo available on request
-</p>
+<strong>The choice between string , GUIDs or numeric IDs has trade-offs; </strong>
+Numeric Ds are quicker as they occupy less space on storage; and with DISK IO being the slowest database activity, numerid IDs are more performant as more data records could be crammed into memory with each DISK IO read or Write 
 
-This repo contains three outdated projects (see notes above)
+<strong>For example:-</strong> 
+A standard <strong>Person</strong> table, suchas as the one below, in 3rd Normal Formal, with 3 16Bytes GUID foreign keys, when a 1 BYTE number key wiould have done, would have (16 * 3) - 3 == 45Bytes redundant Bytes per record
+```
+Person (
+    Id : GUID(16 Bytes), 
+    Firstname: VARCHAR(max 35 Bytes), 
+    LastName: VARCHAR(max 35 Bytes), 
+    NoOfDependants(1 Byte), 
+    Age: TINY INT(1 Byte), 
+    GenderId: GUID(16 Bytes), 
+    TitleId: GUID(16 Bytes)
+)
+```
+This table has an allocation of 120 Bytes person record. 
+<br/>
+Assuming a page size of 32KB, only 266 records would be packed into each 32KB page. Constrast the same <strong>Person</strong> table below whose better design means 355 records would be packed into each 32KB page.  A massive 33% increase!; at least on paper; more if the complete table is small enough to live completely in memory.  
+A  <strong>TINY INT </strong> (0-256 when unsigned) is capable of holding all the possible values for Gender or Title.
+
+    Person(
+        Id : GUID(16 Bytes),   
+        Firstname: VARCHAR(max 35 Bytes),   
+        LastName: VARCHAR(max 35 Bytes),   
+        NoOfDependants(1 Byte),   
+        Age: TINYINT(1 Byte),   
+        GenderId: TINYINT(1 Byte),   
+        TitleId: TINYINT(1 Byte)  
+    )
+
+This table has a smaller allocation of 90 Bytes person record. 
+Note: This might not be such a big issue these days when solid memory is cheap as DISK IO activities are much faster on solid memory which do not require any physically spinning DISK MEDIA.  
+Number-based IDs are more performant but they are easier to attack.
+An attack could be someone screen-scraping a website, using calls such as these:- 
+
+    site/getuser/1, 
+    site/getuser/2, 
+    site/getuser/3, 
+    site/getuser/4, 
+    site/getuser/5
+    etc
+Some databases have features to detect such, by purposely skipping on the generated ID sequence, i.e 
+
+    user:1, 
+    user:4, 
+    user:5, 
+    user:9, 
+    user:11, 
+    etc
+Any call to <code>getuser/2</code> in the example given above, is either a programming error or a malicious attack :) 
+<h2> These projects  contains three outdated and incomplete code, notes and finer details  (see notes above)</h2>
 <ul>
   <li><h2>Decode.Api.Node</h2><p>This is a Typescript Loopback 4 based Restful API</p></li>
   <li><h2>Decode.Web.Angular</h2><p>This is a Typescript Angular 12 based Client</p></li>
@@ -95,3 +130,4 @@ This repo contains three outdated projects (see notes above)
 <li>Support more languages; beside english (en), french (fr) & punjanbi (pa, RTL) localisation. Note that localised Text and other media are device-dependent, ie a text on a browser might be longer and more verbose than that on a small screen mobile phone or RasperryPi-type device</li>  
 <li>Add maintainance page, early-warning of maintenance schedule to logged on users, proper site shutdown </li>
 </ul>
+
