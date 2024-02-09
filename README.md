@@ -24,7 +24,7 @@ The API is <strong>datastore-agnostic</strong> i.e. it could use <strong>MongoDB
 It also has a really nice <strong>HealthCheck</strong> which renders its output as either <strong>HTML, XML, JSON, or Text </strong>.  All API Endpoints allow the on-the-fly conversion of output to  to XHTML using XSLT, 
 see the Browser HTML output at: <strong>https://decodeonline.app/api/v1/healthcheck/healthstatus.</strong> for an example of this.
 
-There is a dockerised development <strong>SMTP</strong> server and an email client available at <strong>https://decodeonline.app/emails</strong>
+There is a dockerised development, avilable on development environments <strong>SMTP</strong> server and an email client available at <strong>https://decodeonline.app/emails</strong>
 
 <strong>http://www.pikin.co</strong> is the UX POC counterpart, that supports localization (left & right languages) and globalization, and a layered client architecture; it <strong>work of art</strong>, and like all works of art, I believe, it should be in the public domain 
 
@@ -35,7 +35,7 @@ The newer version of this mono-repo has been broken up into several NPM packages
 <strong>Loopback4</strong> is a great improvement from Loopback 3, however, it lacks support for Composite Keys. 
 Whilst this may be good for optimal performance on transactional queries involving tables in <strong>4th Normal Form</strong>(as it is inherently easier to create covering indexes in this <strong>Form</strong>), it is sometimes undesirable to be restricted to just to <strong>None-Composite</strong> Keys; as <strong>Composite Keys</strong> do come in handy in some use cases. 
 
-Support for <strong>Express Middleware</strong> seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM can Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though offering just <strong>Seeding</strong> and <strong>Upgrades</strong>; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required to handle more advanced migrations such as <strong>Versioned Updategrade and Downgrade</strong>steps. 
+Support for <strong>Express Middleware</strong> seems patchy as well unless one hosts the Loopback4 Application as a Route on an Express Application. Loopback4 being an ORM, it can use Non-SQL Databases and it can also use the more conventional Relational Databases such as Oracle, MS SQLServer, Postgres & MySQl. It has the ability to define and hydrate tables with migrations. Migration support is minimal though, offering just <strong>Seeding</strong> and <strong>Upgrades</strong>; hence a third-party Library such as db-migrate(https://db-migrate.readthedocs.io/en/latest/,  https://www.npmjs.com/package/db-migrate) is required, to handle more advanced migrations such as <strong>Versioned Updategrade and Downgrade</strong>steps. 
 
 <br/>
 <strong>Typescript</strong> is used extensively in this Mono-Repo, across the clients, servers, and even Databases(if the <strong>Javascript/JSON-based</strong> Database such as <strong>MongoDb</strong> or similar is opted for, when applicable). 
